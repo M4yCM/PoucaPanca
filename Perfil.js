@@ -25,7 +25,7 @@ export default function Perfil() {
 
   return (
     <View style={css.tela}>
-      <Text style={css.titulo}>Perfil</Text>
+      <Text style={css.titulo}>Hoje</Text>
       {categorias.map((item, index) => (
         <View key={index} style={css.graficoItem}>
           <Text style={[css.label, { color: `rgb(${item.color.join(',')})` }]}>
@@ -42,18 +42,23 @@ export default function Perfil() {
           />
         </View>
       ))}
+
     </View>
   );
 }
 
 const css = StyleSheet.create({
   tela: {
-    flex: 1
+    flex: 1,
+    backgroundColor:'#f0f8ff',
   },
   titulo: {
-    fontSize: 22,
+    fontSize: 30,
     fontWeight: 'bold',
     marginBottom: 20,
+    backgroundColor:'#f8f8ff',
+    color:'#008000'
+    
   },
   graficoItem: {
     marginBottom: 20,
