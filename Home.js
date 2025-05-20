@@ -11,51 +11,59 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 export default function Home() {
   return (
     <SafeAreaView>
-    <View style={estilo.texto}>
-         <Text style={estilo.cadabra}>Alimento</Text>
-         <Text style={estilo.cadabra}>Peso</Text>
-         <Text style={estilo.cadabra}>Kcal</Text>
+      <View style={estilo.principal}>
+        <Text>Almoço</Text>
       </View>
-    <View style={estilo.caixa}>
-      
-      <View >
-        <TouchableOpacity style={estilo.caixinha1}><Text style={estilo.textinho}>Maçã</Text></TouchableOpacity>
-      </View>
+      <View style={estilo.texto}>
+          <Text style={estilo.cadabra}>Alimento</Text>
+          <Text style={estilo.cadabra}>Peso</Text>
+          <Text style={estilo.cadabra}>Kcal</Text>
+        </View>
+      <View style={estilo.caixa}>
+        
+        <View >
+          <TouchableOpacity style={estilo.caixinha1}><Text style={estilo.textinho}>Maçã</Text></TouchableOpacity>
+        </View>
 
-      <View >
-        <TouchableOpacity style={estilo.caixinha2}><Text style={estilo.textinho}>Macarrão</Text></TouchableOpacity>
-      </View>
+        <View >
+          <TouchableOpacity style={estilo.caixinha2}><Text style={estilo.textinho}>Macarrão</Text></TouchableOpacity>
+        </View>
 
-      <View >
-        <TouchableOpacity style={estilo.caixinha1}><Text style={estilo.textinho}>Arroz</Text></TouchableOpacity>
-      </View>
+        <View >
+          <TouchableOpacity style={estilo.caixinha1}><Text style={estilo.textinho}>Arroz</Text></TouchableOpacity>
+        </View>
 
-      <View >
-        <TouchableOpacity style={estilo.caixinha2}><Text style={estilo.textinho}>Feijão</Text></TouchableOpacity>
-      </View>
+        <View >
+          <TouchableOpacity style={estilo.caixinha2}><Text style={estilo.textinho}>Feijão</Text></TouchableOpacity>
+        </View>
 
-      <View >
-        <TouchableOpacity style={estilo.caixinha1}><Text style={estilo.textinho}>Purê</Text></TouchableOpacity>
-      </View>
+        <View >
+          <TouchableOpacity style={estilo.caixinha1}><Text style={estilo.textinho}>Purê</Text></TouchableOpacity>
+        </View>
 
-      <View >
-        <TouchableOpacity style={estilo.caixinha2}><Text style={estilo.textinho}>Frango</Text></TouchableOpacity>
-      </View>
+        <View >
+          <TouchableOpacity style={estilo.caixinha2}><Text style={estilo.textinho}>Frango</Text></TouchableOpacity>
+        </View>
 
-      <View >
-        <TouchableOpacity style={estilo.caixinha1}><Text style={estilo.textinho}>Batata</Text></TouchableOpacity>
-      </View>
+        <View >
+          <TouchableOpacity style={estilo.caixinha1}><Text style={estilo.textinho}>Batata</Text></TouchableOpacity>
+        </View>
 
-    </View>
+      </View>
     </SafeAreaView>
   );
 }
 
 const estilo = StyleSheet.create({
+principal:{
+  backgroundColor:'green',
+  borderRadius:30,
+  },
+
   caixa:{
     marginTop:90,
     marginLeft:40,
-    marginTop:-10
+    marginTop:-5
   },
 
   texto:{
@@ -64,12 +72,15 @@ const estilo = StyleSheet.create({
     marginRight:50,
     backgroundColor:'#a9a9a9',
     height:50,
-    width:'100%'
+    width:'100%',
+    marginTop:30
+    
   },
 
   cadabra:{
     fontSize:20,
-    color:'#fff'
+    color:'#fff',
+    marginTop:10
   },
 
 
