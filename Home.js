@@ -21,9 +21,16 @@ export default function Home() {
         
       </View>
       <View style={estilo.texto}>
-          <Text style={estilo.cadabra}>Alimento</Text>
-          <Text style={estilo.cadabra}>Peso</Text>
-          <Text style={estilo.cadabra}>Kcal</Text>
+          <TouchableOpacity>
+            <Text style={estilo.cadabra}>Alimento</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text style={estilo.cadabra}>Peso</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text style={estilo.cadabra}>Kcal</Text>
+          </TouchableOpacity>
+
         </View>
       <View style={estilo.caixa}>
         
