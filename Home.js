@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 import { MaterialCommunityIcons } from 'react-native-vector-icons';
 import { Provider as PaperProvider } from 'react-native-paper';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
@@ -12,7 +12,13 @@ export default function Home() {
   return (
     <SafeAreaView>
       <View style={estilo.principal}>
-        <Text>Almoço</Text>
+        <Text style={estilo.almoco}>Almoço</Text>
+        
+        <View style={{flex: 0.5, height: 1, borderRadius:20, marginLeft:40, width:350, backgroundColor: 'white'}}>
+          <MaterialCommunityIcons name='close-circle' style={{marginLeft:10, marginTop:5, fontSize:20}} />
+          <TextInput style={{marginTop:-29, marginLeft:40}}></TextInput>
+        </View> 
+        
       </View>
       <View style={estilo.texto}>
           <Text style={estilo.cadabra}>Alimento</Text>
@@ -55,9 +61,19 @@ export default function Home() {
 }
 
 const estilo = StyleSheet.create({
-principal:{
-  backgroundColor:'green',
-  borderRadius:30,
+  principal:{
+    backgroundColor:'#90ee90',
+    opacity:0.8,
+    borderRadius:10,
+    height:100,
+    marginTop:-20
+  },
+
+  almoco:{
+    fontWeight:'bold',
+    fontSize:30,
+    paddingLeft:50,
+    //fontFamily:'serif'
   },
 
   caixa:{
@@ -72,8 +88,7 @@ principal:{
     marginRight:50,
     backgroundColor:'#a9a9a9',
     height:50,
-    width:'100%',
-    marginTop:30
+    width:'100%'
     
   },
 
@@ -95,9 +110,9 @@ principal:{
 
   caixinha2:{
     borderRadius:18, 
-    backgroundColor:'#d3cecd', 
+    backgroundColor:'#a9a9a9', 
     marginTop:20, 
-    width:330, 
+    width:360, 
     height:65
 
   },
